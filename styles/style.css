@@ -110,8 +110,8 @@ ol {
 .search-form__textfield {
   width: 225px;
   border: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   color: white;
   font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
@@ -204,11 +204,6 @@ ol {
   opacity: 0.2;
 }
 
-.content__list-container {
-  position: relative;
-  height: 298px;
-  overflow-y: auto;
-}
 
 .content__list {
   display: flex;
@@ -228,6 +223,10 @@ ol {
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
   cursor: pointer;
+}
+
+.content__card-link:active {
+  background: #545050;
 }
 
 .content__card-link:focus {
@@ -265,12 +264,15 @@ ol {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
   width: 196px;
   overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
@@ -290,7 +292,7 @@ ol {
   align-items: end;
   height: 34px;
   border: none;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 0;
   color: #fff;
   font-family: "Fira Sans Condensed", Arial, sans-serif;
