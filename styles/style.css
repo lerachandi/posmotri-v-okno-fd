@@ -204,11 +204,11 @@ ol {
   opacity: 0.2;
 }
 
-
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 399px;
 }
 
 .content__list-item {
